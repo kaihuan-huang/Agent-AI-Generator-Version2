@@ -1,54 +1,47 @@
-##  using the OpenAI's GPT-3 API and the Flask web framework:
-import openai_secret_manager
-import openai
-import json
-from flask import Flask, request
+import requests
+from flask import Flask, request, jsonify
 
-# Step 1: Create a user interface
+# Initialize the Flask app
 app = Flask(__name__)
 
-@app.route("/")
-def index():
-    return "Hello World!"
+# Define the endpoint for fetching data from the RESO API
+@app.route("/property", methods=["GET"])
+def fetch_property_data():
+    # Get the listing ID from the request
+    listing_id = request.args.get("listing_id")
 
-@app.route("/input", methods=["POST"])
-def input():
-    # Step 2: Retrieve user input and API data
-    user_input = request.json["user_input"]
-    api_data = json.loads(fetch_data_from_api())
+    # Make the GET request to the RESO API
+    endpoint = "https://api.reso.org/property"
+    params = {
+        "listingid": listing_id
+    }
+    response = requests.get(endpoint, params=params)
+    data = response.json()
 
-    # Step 3: Process input and API data
-    input_for_gpt3 = process_input_and_api_data(user_input, api_data)
+    # Return the data
+    return jsonify(data)
 
-    # Step 4: Send input to GPT-3 and get response
-    response = get_gpt3_response(input_for_gpt3)
+# Define the endpoint for generating post content using GPT-3
+@app.route("/generate", methods=["POST"])
+def generate_content():
+    # Get the input from the request
+    input_text = request.json["input_text"]
 
-    return response
-
-def fetch_data_from_api():
-    # code to fetch data from an API goes here
-    pass
-
-def process_input_and_api_data(user_input, api_data):
-    # code to process input and API data goes here
-    pass
-
-def get_gpt3_response(input_for_gpt3):
-    # Step 2: Use openai_secret_manager to fetch the API key
+    # Use openai_secret_manager to fetch the API key
+    import openai_secret_manager
     secrets = openai_secret_manager.get_secrets("openai")
     openai.api_key = secrets["api_key"]
-    
-    # Step 3: Create the API request
+
+    # Use GPT-3 to generate post content
     response = openai.Completion.create(
         engine="text-davinci-002",
-        prompt=f"{input_for_gpt3}",
+        prompt=f"{input_text}",
         temperature=0.8,
     )
+    post_content = response["choices"][0]["text"]
 
-    return response["choices"][0]["text"]
+    # Return the generated content
+    return jsonify(post_content)
 
 if __name__ == "__main__":
     app.run(debug=True)
-    
-# create the Flask web app to receive the user input via a POST request to the "/input" endpoint. Then we use this user input and get additional information from an external API, processing that information together and passing it as input to GPT-3 by using OpenAI's API. Finally, we return the response from GPT-3 to the user.
-# will need to add the specific code to fetch data from the API, process input and API data and make the gpt3 request as per your requirement. Also, the endpoint urls, request and response format can be adjusted as per your requirement.
