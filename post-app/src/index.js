@@ -8,14 +8,14 @@ import RealEstateApp from './RealEstateApp';
 
 
 
-// const root = ReactDOM.createRoot(document.getElementById('root'));
+// const root = createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>
-//     <App />
+//     <RealEstateApp />
 //   </React.StrictMode>
 // );
 
-createRoot.render(<RealEstateApp />, document.getElementById("root"))
+// createRoot.render(<RealEstateApp />, document.getElementById("root"))
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
