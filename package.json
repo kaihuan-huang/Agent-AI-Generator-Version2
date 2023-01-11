@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "antd": "^5.1.4",
+    "node.js": "^0.0.1-security"
+  }
+}

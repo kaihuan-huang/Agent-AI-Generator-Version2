@@ -30,7 +30,7 @@ def generate_content():
     # Use openai_secret_manager to fetch the API key
     import openai_secret_manager
     secrets = openai_secret_manager.get_secrets("openai")
-    openai.api_key = secrets["api_key"]
+    openai.api_key = secrets["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"]
 
     # Use GPT-3 to generate post content
     response = openai.Completion.create(
