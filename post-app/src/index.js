@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import { createRoot } from "react-dom";
-import './index.css';
+import "./index.css";
 // import App from './RealEstateApp';
 
 // import 'antd/dist/antd.css';
-import RealEstateApp from './RealEstateApp';
+import RealEstateApp from "./RealEstateApp";
 
 
 
@@ -20,4 +20,3 @@ import RealEstateApp from './RealEstateApp';
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-

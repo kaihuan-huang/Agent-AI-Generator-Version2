@@ -57,7 +57,36 @@
           <pre>{postContent}</pre>
         </div>
     </div>
+
+    <!-- <div> -->
+<!--       
+      <form onSubmit={handleSubmit}>
+        <label>
+          Listing ID:
+          <input
+            type="text"
+            value={listingId}
+            onChange={(e)=>setListingId(e.target.value)}
+          />
+        </label>
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? "Loading..." : "Submit"}
+        </button>
+      </form>
+   
+        <div>
+          <h2>Property Data</h2>
+          <p>Address: {propertyData.address.line1}</p>
+          <p>City: {propertyData.address.city}</p>
+          <p>State: {propertyData.address.state}</p>
+          <p>Postal Code: {propertyData.address.postal1}</p>
+        </div>
  
+      <h2>Post Content</h2>
+      <p>{postContent}</p>
+   
+ </div> -->
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
