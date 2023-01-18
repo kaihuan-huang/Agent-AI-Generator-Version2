@@ -81,7 +81,7 @@
 // }
 
 
-import React, { useState } from "react";
+import React, { useState } from "post-app/node_modules/@types/react";
 import axios from "axios";
 
 const RealEstateApp = () => {

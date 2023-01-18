@@ -1,28 +1,40 @@
 import requests
-from flask import Flask, request, jsonify
+from flask import Flask,render_template, request, jsonify
 import openai
 
 # Initialize the Flask app
 app = Flask(__name__)
 
+@app.route('/', methods=["GET", "POST"])
+def index(): 
+    return render_template('index.html')
+    
 # Define the endpoint for fetching data from the RESO API
-@app.route("/property", methods=["GET"])
+@app.route("/property/", methods=["GET","POST"])
 def fetch_property_data():
+    
+    if request.method == "POST":
+        print(request.form['code'])
+        
+    
+    
     # Get the listing ID from the request
     listing_id = request.args.get("listing_id")
-
+    # listing_id = request.form['address']
+    print(listing_id)
+   
     # Make the GET request to the attomdat API
-    endpoint = 'https://api.gateway.attomdata.com/propertyapi/v1.0.0/property/id'
+    endpoint = 'https://api.gateway.attomdata.com/propertyapi/v1.0.0/property/address'
     
     headers = {
     'Accept': 'application/json', # specifying that the response should be in JSON format
-    'apikey': '0fa3cb2b0e55a833c4f4fdb3154d51e8'
+    'apikey': '2b1e86b638620bf2404521e6e9e1b19e'
     }
     
     params = {
         "listingid": listing_id,
         # the geographic area of the property
-        "geoid": 'PL0820000',
+        "postalcode":request.form['code'], 
         'minBeds': 1,
         'maxBeds': 2
     }
@@ -32,9 +44,11 @@ def fetch_property_data():
 
     # Return the data
     return jsonify(data)
+    
+    
 
 # Define the endpoint for generating post content using GPT-3
-@app.route("/generate", methods=["POST"])
+@app.route("/generate/", methods=["POST"])
 def generate_content():
     # Get the input from the request
     input_text = request.json["input_text"]
@@ -55,8 +69,10 @@ def generate_content():
     # Return the generated content
     return jsonify(post_content)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True, port='9000')
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port='8888', debug=True)
 
     
 ## have defined two endpoints in the Flask app, one for fetching data from the RESO API and another one for generating post content using GPT-3. The first endpoint is a GET request to the "/property" endpoint, which is using the listing ID passed as a query parameter to fetch data from the RESO API, it then returns the data in a JSON format.
