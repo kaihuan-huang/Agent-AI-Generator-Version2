@@ -28,6 +28,8 @@
       </div>
 
       <input type="submit" value='submit'/>
+
+      
     </form>
 
     <form action="http://192.168.0.112:8888/generate/" method='POST'>
@@ -35,91 +37,9 @@
         <h2>Generate Ideas</h2>
         <input type="text" class="input_text" id="input_text"  name='input_text' placeholder="Enter some keywords">
         <input type="submit" value='submit'/>
+        
       </div>
-
-
-
-    <div class="container">
-      <h1 class="mt-5">Hiiiiii Testing</h1>
-
-      <p>The Skolo blog writing tool will allow you to enter a blog topic and keywords --- and get in return a full blog that you can use anywhere. The tool intiially provides a list of topic ideas to choose from, once you select a topic, you can go ahead and generate a full content AI blog.</p>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <form class="" action="/" method="post">
-            <div class="mb-3">
-              <label for="blogTopic" class="form-label">What topic do you want to get blog ideas on?</label>
-              <input type="text" class="form-control" id="blogTopic" name="blogTopic" placeholder="Enter a blog topic">
-            </div>
-            <input type="hidden" name="form1" value="form1">
-
-            <button type="submit" id="blogTopicButton" class="btn btn-primary">Generate Blog Ideas</button>
-          </form>
-        </div>
-
-
-
-
-
-        <div class="col-lg-6">
-          1. {{blogTopicIdeas|safe}}
-        </div>
-      </div>
-
-
-      <br>
-      <hr>
-      <br>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <form class="" action="/" method="post">
-            <div class="mb-3">
-              <label for="blogSection" class="form-label">Enter the Blog Topic Below that you have selected to write about</label>
-              <input type="text" class="form-control" id="blogSection" name="blogSection" placeholder="Enter the blog title to generate blog sections on">
-            </div>
-            <input type="hidden" name="form2" value="form2">
-
-            <button type="submit" class="btn btn-primary">Generate Blog Sections</button>
-          </form>
-        </div>
-
-
-
-        <div class="col-lg-6">
-          {{blogSectionIdeas|safe}}
-        </div>
-      </div>
-
-      <br>
-      <hr>
-      <br>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <form class="" action="/" method="post">
-            <div class="mb-3">
-              <label for="blogExpander" class="form-label">Enter the Blog section title you want to expand</label>
-              <input type="text" class="form-control" id="blogExpander" name="blogExpander" placeholder="Enter the blog section title">
-            </div>
-            <input type="hidden" name="form3" value="form3">
-
-            <button type="submit" class="btn btn-primary">Expand on the title</button>
-          </form>
-        </div>
-
-
-
-        <div class="col-lg-6">
-          {{blogExpanded|safe}}
-        </div>
-      </div>
-
-
-    </div>
-
-
-
+    </form>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

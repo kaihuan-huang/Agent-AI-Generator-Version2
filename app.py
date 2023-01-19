@@ -2,6 +2,7 @@ import requests
 from flask import Flask,render_template, request, jsonify
 import openai
 import os
+import json
 
 
 # Initialize the Flask app
@@ -16,7 +17,8 @@ def index():
 def fetch_property_data():
     
     if request.method == "POST":
-        print(request.form['code'])
+        address = (request.form['address'],request.form['city'],request.form['state'],request.form['code'])
+        print(address)
         
     # Get the listing ID from the request
     listing_id = request.args.get("listing_id")
@@ -41,9 +43,18 @@ def fetch_property_data():
     
     response = requests.get(endpoint, headers=headers, params=params,verify=False)
     data = response.json()
+    d = json.dumps(data, indent=4)
+    with open('sample.json', 'w') as ofile:
+        ofile.write(d)
+    print('data',data)
+    print('address',address)
+    
 
     # Return the data
     return jsonify(data)
+    
+   # Extract the address from the returned data
+    
     
     
 
@@ -81,14 +92,14 @@ def fetch_property_data():
 # Define the endpoint for generating post content using GPT-3
 @app.route("/generate/", methods=["GET","POST"])
 def generate_content():
+    address = (request.form['address'],request.form['city'],request.form['state'],request.form['code'])
+    print(address)
+        
     # Get the input from the request
     if request.method == "POST":
         print(request.form) # Debugging line
         input_text = request.form['input_text']
-    else:
-        print(request.json) # Debugging line
-        input_text = request.json["input_text"]
-    print('input_text',input_text)
+
     
        # Use an environment variable to set the API key
     openai.api_key = "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"
@@ -102,10 +113,11 @@ def generate_content():
     # Use GPT-3 to generate post content
     response = openai.Completion.create(
         engine="text-davinci-002",
-        prompt=f"{input_text}",
+        prompt=  f"{input_text} Write an interesting fact about the property located at {address[0]}, {address[1]}, {address[2]} {address[3]}",
         temperature=0.8,
     )
     post_content = response["choices"][0]["text"]
+    print('post_content',post_content)
 
     # Return the generated content
     return jsonify(post_content)

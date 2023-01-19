@@ -1,0 +1,401 @@
+{
+    "status": {
+        "version": "1.0.0",
+        "code": 0,
+        "msg": "SuccessWithResult",
+        "total": 2832,
+        "page": 1,
+        "pagesize": 10,
+        "transactionID": "6b1fdab7e0ceb64a8f45a49e79ce20ae"
+    },
+    "property": [
+        {
+            "identifier": {
+                "Id": 170133,
+                "fips": "06085",
+                "apn": "434-12-041",
+                "attomId": 170133
+            },
+            "address": {
+                "country": "US",
+                "countrySubd": "CA",
+                "line1": "1387 LOCUST ST",
+                "line2": "SAN JOSE, CA 95110",
+                "locality": "SAN JOSE",
+                "matchCode": "ExaStr",
+                "oneLine": "1387 LOCUST ST, SAN JOSE, CA 95110",
+                "postal1": "95110",
+                "postal2": "3322",
+                "postal3": "C011"
+            },
+            "location": {
+                "accuracy": "Rooftop",
+                "latitude": "37.312373",
+                "longitude": "-121.880456",
+                "distance": 0.0,
+                "geoid": "CO06085, ND0000452368, ND0004780528, PL0668000, RS0004883085, SB0000073750, SB0000073773, SB0000138483, ZI95110",
+                "geoIdV4": {
+                    "CS": "ba64bbe401e57f82e193b781f116426e",
+                    "N1": "1a9a7983e3e53f825ca40ea310ec6e9d",
+                    "PL": "d0c95097934d9046c3f2df307821d6b3",
+                    "N2": "36c4b00abce902bdfbbd7e3a22665cc1",
+                    "ZI": "2f0ce0dd777b9e677afeb18ce5fdc051",
+                    "N4": "823b35451c6915bdf098b4b465e82120"
+                }
+            },
+            "vintage": {
+                "lastModified": "2022-12-17",
+                "pubDate": "2022-12-17"
+            }
+        },
+        {
+            "identifier": {
+                "Id": 211454,
+                "fips": "06085",
+                "apn": "434-22-006",
+                "attomId": 211454
+            },
+            "address": {
+                "country": "US",
+                "countrySubd": "CA",
+                "line1": "1431 LITTLE ORCHARD ST",
+                "line2": "SAN JOSE, CA 95110",
+                "locality": "SAN JOSE",
+                "matchCode": "ExaStr",
+                "oneLine": "1431 LITTLE ORCHARD ST, SAN JOSE, CA 95110",
+                "postal1": "95110",
+                "postal2": "3502",
+                "postal3": "C018"
+            },
+            "location": {
+                "accuracy": "Rooftop",
+                "latitude": "37.312803",
+                "longitude": "-121.877769",
+                "distance": 0.0,
+                "geoid": "CO06085, CS0692830, DB0634590, ND0000252475, ND0000451980, ND0000451982, ND0004780528, PL0668000, RS0004886000, SB0000073750, SB0000073773, SB0000073774, SB0000138483, ZI95110",
+                "geoIdV4": {
+                    "CS": "ba64bbe401e57f82e193b781f116426e",
+                    "N1": "1a9a7983e3e53f825ca40ea310ec6e9d",
+                    "N2": "b38f78e7666be04336390a70c3a97d42",
+                    "PL": "d0c95097934d9046c3f2df307821d6b3",
+                    "ZI": "fb3ddb3b64f444396a46e2aba2a6924b",
+                    "N4": "bd7049d5c3ecc39d74f8eac598059ad9"
+                }
+            },
+            "vintage": {
+                "lastModified": "2022-12-17",
+                "pubDate": "2022-12-17"
+            }
+        },
+        {
+            "identifier": {
+                "Id": 211457,
+                "fips": "06085",
+                "apn": "434-09-095",
+                "attomId": 211457
+            },
+            "address": {
+                "country": "US",
+                "countrySubd": "CA",
+                "line1": "1232 SHERMAN ST",
+                "line2": "SAN JOSE, CA 95110",
+                "locality": "SAN JOSE",
+                "matchCode": "ExaStr",
+                "oneLine": "1232 SHERMAN ST, SAN JOSE, CA 95110",
+                "postal1": "95110",
+                "postal2": "3434",
+                "postal3": "C018"
+            },
+            "location": {
+                "accuracy": "Rooftop",
+                "latitude": "37.317633",
+                "longitude": "-121.876479",
+                "distance": 0.0,
+                "geoid": "CO06085, CS0692830, DB0634590, PL0668000, RS0004884997, ZI95110",
+                "geoIdV4": {
+                    "CS": "ba64bbe401e57f82e193b781f116426e",
+                    "N1": "1a9a7983e3e53f825ca40ea310ec6e9d",
+                    "N2": "5d5e2e5de7b4032138941273e7f77be8",
+                    "PL": "d0c95097934d9046c3f2df307821d6b3",
+                    "ZI": "2f0ce0dd777b9e677afeb18ce5fdc051",
+                    "N4": "a973e7865eb4b250752fe0cef9e8fb1a"
+                }
+            },
+            "vintage": {
+                "lastModified": "2022-12-17",
+                "pubDate": "2022-12-17"
+            }
+        },
+        {
+            "identifier": {
+                "Id": 217304,
+                "fips": "06085",
+                "apn": "434-24-026",
+                "attomId": 217304
+            },
+            "address": {
+                "country": "US",
+                "countrySubd": "CA",
+                "line1": "146 DARBY CT",
+                "line2": "SAN JOSE, CA 95110",
+                "locality": "SAN JOSE",
+                "matchCode": "ExaStr",
+                "oneLine": "146 DARBY CT, SAN JOSE, CA 95110",
+                "postal1": "95110",
+                "postal2": "3610",
+                "postal3": "C018"
+            },
+            "location": {
+                "accuracy": "Rooftop",
+                "latitude": "37.312168",
+                "longitude": "-121.874164",
+                "distance": 0.0,
+                "geoid": "CO06085, DB0634590, ND0000451980, ND0004780528, PL0668000, RS0004885668, SB0000073750, SB0000073773, SB0000138483, ZI95110",
+                "geoIdV4": {
+                    "CS": "ba64bbe401e57f82e193b781f116426e",
+                    "N1": "1a9a7983e3e53f825ca40ea310ec6e9d",
+                    "N2": "b38f78e7666be04336390a70c3a97d42",
+                    "PL": "d0c95097934d9046c3f2df307821d6b3",
+                    "N4": "14c110e9ddd519fbeec9314613499dcb",
+                    "ZI": "2f0ce0dd777b9e677afeb18ce5fdc051"
+                }
+            },
+            "vintage": {
+                "lastModified": "2022-12-17",
+                "pubDate": "2022-12-17"
+            }
+        },
+        {
+            "identifier": {
+                "Id": 246263,
+                "fips": "06085",
+                "apn": "259-09-016",
+                "attomId": 246263
+            },
+            "address": {
+                "country": "US",
+                "countrySubd": "CA",
+                "line1": "764 CHESTNUT ST",
+                "line2": "SAN JOSE, CA 95110",
+                "locality": "SAN JOSE",
+                "matchCode": "ExaStr",
+                "oneLine": "764 CHESTNUT ST, SAN JOSE, CA 95110",
+                "postal1": "95110",
+                "postal2": "1805",
+                "postal3": "C008"
+            },
+            "location": {
+                "accuracy": "Rooftop",
+                "latitude": "37.342907",
+                "longitude": "-121.913242",
+                "distance": 0.0,
+                "geoid": "CO06085, DB0634590, ND0005008413, PL0668000, RS0004887041, SB0000073741, SB0000073745, SB0000073756, ZI95110",
+                "geoIdV4": {
+                    "CS": "ba64bbe401e57f82e193b781f116426e",
+                    "N1": "035461da0926961a8400b995c4eb460f",
+                    "N4": "87b43c4f30bcefd1768f3783f74ca542",
+                    "PL": "d0c95097934d9046c3f2df307821d6b3",
+                    "ZI": "2f0ce0dd777b9e677afeb18ce5fdc051"
+                }
+            },
+            "vintage": {
+                "lastModified": "2022-12-17",
+                "pubDate": "2022-12-17"
+            }
+        },
+        {
+            "identifier": {
+                "Id": 315362,
+                "fips": "06085",
+                "apn": "434-07-047",
+                "attomId": 315362
+            },
+            "address": {
+                "country": "US",
+                "countrySubd": "CA",
+                "line1": "1050 MASTIC ST",
+                "line2": "SAN JOSE, CA 95110",
+                "locality": "SAN JOSE",
+                "matchCode": "ExaStr",
+                "oneLine": "1050 MASTIC ST, SAN JOSE, CA 95110",
+                "postal1": "95110",
+                "postal2": "3118",
+                "postal3": "C011"
+            },
+            "location": {
+                "accuracy": "Rooftop",
+                "latitude": "37.319451",
+                "longitude": "-121.879756",
+                "distance": 0.0,
+                "geoid": "CO06085, CS0692830, DB0634590, PL0668000, RS0004804358, ZI95110",
+                "geoIdV4": {
+                    "CS": "ba64bbe401e57f82e193b781f116426e",
+                    "N1": "1a9a7983e3e53f825ca40ea310ec6e9d",
+                    "N2": "5d5e2e5de7b4032138941273e7f77be8",
+                    "PL": "d0c95097934d9046c3f2df307821d6b3",
+                    "ZI": "2f0ce0dd777b9e677afeb18ce5fdc051",
+                    "N4": "eac82b351cc064e1b7720614f7aad6bc"
+                }
+            },
+            "vintage": {
+                "lastModified": "2022-12-17",
+                "pubDate": "2022-12-17"
+            }
+        },
+        {
+            "identifier": {
+                "Id": 717418,
+                "fips": "06085",
+                "apn": "264-33-010",
+                "attomId": 717418
+            },
+            "address": {
+                "country": "US",
+                "countrySubd": "CA",
+                "line1": "103 DUANE ST",
+                "line2": "SAN JOSE, CA 95110",
+                "locality": "SAN JOSE",
+                "matchCode": "ExaStr",
+                "oneLine": "103 DUANE ST, SAN JOSE, CA 95110",
+                "postal1": "95110",
+                "postal2": "2813",
+                "postal3": "C003"
+            },
+            "location": {
+                "accuracy": "Rooftop",
+                "latitude": "37.324877",
+                "longitude": "-121.884433",
+                "distance": 0.0,
+                "geoid": "CO06085, CS0692830, DB0634590, PL0668000, RS0004883019, ZI95110",
+                "geoIdV4": {
+                    "CS": "ba64bbe401e57f82e193b781f116426e",
+                    "N1": "1a9a7983e3e53f825ca40ea310ec6e9d",
+                    "PL": "d0c95097934d9046c3f2df307821d6b3",
+                    "N4": "095df638dcc59eb49dcbe6c101c4194d",
+                    "N2": "d50009203de9206201fe82ce127add41",
+                    "ZI": "2f0ce0dd777b9e677afeb18ce5fdc051"
+                }
+            },
+            "vintage": {
+                "lastModified": "2022-12-17",
+                "pubDate": "2022-12-17"
+            }
+        },
+        {
+            "identifier": {
+                "Id": 725041,
+                "fips": "06085",
+                "apn": "259-52-071",
+                "attomId": 725041
+            },
+            "address": {
+                "country": "US",
+                "countrySubd": "CA",
+                "line1": "46 W JULIAN ST UNIT 433",
+                "line2": "SAN JOSE, CA 95110",
+                "locality": "SAN JOSE",
+                "matchCode": "ExaStr",
+                "oneLine": "46 W JULIAN ST UNIT 433, SAN JOSE, CA 95110",
+                "postal1": "95110",
+                "postal2": "2488",
+                "postal3": "C008"
+            },
+            "location": {
+                "accuracy": "Rooftop",
+                "latitude": "37.339905",
+                "longitude": "-121.894366",
+                "distance": 0.0,
+                "geoid": "CO06085, ND0000452439, ND0005008413, PL0668000, SB0000073741, SB0000073753, SB0000073756, ZI95110",
+                "geoIdV4": {
+                    "CS": "ba64bbe401e57f82e193b781f116426e",
+                    "N1": "035461da0926961a8400b995c4eb460f",
+                    "N2": "b20b47dc905a0a3e851d9489e0fa9ebb",
+                    "PL": "d0c95097934d9046c3f2df307821d6b3",
+                    "ZI": "2f0ce0dd777b9e677afeb18ce5fdc051"
+                }
+            },
+            "vintage": {
+                "lastModified": "2022-12-17",
+                "pubDate": "2022-12-17"
+            }
+        },
+        {
+            "identifier": {
+                "Id": 752129,
+                "fips": "06085",
+                "apn": "434-37-053",
+                "attomId": 752129
+            },
+            "address": {
+                "country": "US",
+                "countrySubd": "CA",
+                "line1": "472 SHADOWGRAPH DR",
+                "line2": "SAN JOSE, CA 95110",
+                "locality": "SAN JOSE",
+                "matchCode": "ExaStr",
+                "oneLine": "472 SHADOWGRAPH DR, SAN JOSE, CA 95110",
+                "postal1": "95110",
+                "postal2": "3566",
+                "postal3": "C010"
+            },
+            "location": {
+                "accuracy": "Rooftop",
+                "latitude": "37.310047",
+                "longitude": "-121.881875",
+                "distance": 0.0,
+                "geoid": "CO06085, CS0692830, DB0634590, PL0668000, RS0004828145, ZI95110",
+                "geoIdV4": {
+                    "CS": "ba64bbe401e57f82e193b781f116426e",
+                    "N1": "1a9a7983e3e53f825ca40ea310ec6e9d",
+                    "N2": "f3d2f8fb59279221a0956a07a8d1bb41",
+                    "PL": "d0c95097934d9046c3f2df307821d6b3",
+                    "N4": "8106a0a8115836f314b82aeebad1fea7",
+                    "ZI": "2f0ce0dd777b9e677afeb18ce5fdc051"
+                }
+            },
+            "vintage": {
+                "lastModified": "2022-12-17",
+                "pubDate": "2022-12-17"
+            }
+        },
+        {
+            "identifier": {
+                "Id": 783723,
+                "fips": "06085",
+                "apn": "434-40-047",
+                "attomId": 783723
+            },
+            "address": {
+                "country": "US",
+                "countrySubd": "CA",
+                "line1": "219 SHADOW DANCE DR",
+                "line2": "SAN JOSE, CA 95110",
+                "locality": "SAN JOSE",
+                "matchCode": "ExaStr",
+                "oneLine": "219 SHADOW DANCE DR, SAN JOSE, CA 95110",
+                "postal1": "95110",
+                "postal2": "3562",
+                "postal3": "C010"
+            },
+            "location": {
+                "accuracy": "Rooftop",
+                "latitude": "37.310515",
+                "longitude": "-121.879343",
+                "distance": 0.0,
+                "geoid": "CO06085, ND0004778985, ND0004780528, PL0668000, RS0004828145, SB0000073750, SB0000073773, SB0000138483, ZI95110",
+                "geoIdV4": {
+                    "CS": "ba64bbe401e57f82e193b781f116426e",
+                    "N1": "1a9a7983e3e53f825ca40ea310ec6e9d",
+                    "N2": "f3d2f8fb59279221a0956a07a8d1bb41",
+                    "PL": "d0c95097934d9046c3f2df307821d6b3",
+                    "N4": "8106a0a8115836f314b82aeebad1fea7",
+                    "ZI": "2f0ce0dd777b9e677afeb18ce5fdc051"
+                }
+            },
+            "vintage": {
+                "lastModified": "2022-12-17",
+                "pubDate": "2022-12-17"
+            }
+        }
+    ]
+}
