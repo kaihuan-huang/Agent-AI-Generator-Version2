@@ -18,6 +18,7 @@
   </head>
   <body>
 
+     <!-- 
     <form action="http://192.168.0.112:8888/property/" method='POST'> 
       <div>
         <h2>Property Data</h2>
@@ -30,16 +31,26 @@
       <input type="submit" value='submit'/>
 
       
+    </form> 
+-->
+
+    <form action="http://192.168.0.112:8888/generate/" method='POST'> 
+      <div>
+        <h2>Property Data</h2>
+        <p>Address:<input type='text' name='address'> </p>
+        <p>City: <input type='text' name='city'></p>
+        <p>State: <input type='text' name='state'></p>
+        <p>Postal Code: <input type='text' name='code'></p>
+        <p>some keywords: <input type='text' name='input_text'></p>
+      </div>
+      <input type="submit" value='submit'/>  
     </form>
 
-    <form action="http://192.168.0.112:8888/generate/" method='POST'>
-      <div>
-        <h2>Generate Ideas</h2>
-        <input type="text" class="input_text" id="input_text"  name='input_text' placeholder="Enter some keywords">
-        <input type="submit" value='submit'/>
-        
-      </div>
-    </form>
+    <h3>Generated Post</h3>
+    <div>
+      {{ post_content }}
+    </div>
+
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

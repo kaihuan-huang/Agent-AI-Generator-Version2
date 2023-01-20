@@ -2,7 +2,6 @@ import requests
 from flask import Flask,render_template, request, jsonify
 import openai
 import os
-import json
 
 
 # Initialize the Flask app
@@ -92,17 +91,23 @@ def fetch_property_data():
 # Define the endpoint for generating post content using GPT-3
 @app.route("/generate/", methods=["GET","POST"])
 def generate_content():
-    address = (request.form['address'],request.form['city'],request.form['state'],request.form['code'])
-    print(address)
+    # address = (request.form['address'],request.form['city'],request.form['state'],request.form['code'])
+    # print(address)
         
     # Get the input from the request
     if request.method == "POST":
         print(request.form) # Debugging line
+        address = request.form['address']
+        city = request.form['city']
+        state = request.form['state']
+        code = request.form['code']
         input_text = request.form['input_text']
+        
+        print(address,city,state,code,input_text)
 
     
        # Use an environment variable to set the API key
-    openai.api_key = "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"
+    openai.api_key = "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"
 
 
     # Use openai_secret_manager to fetch the API key
@@ -112,15 +117,22 @@ def generate_content():
 
     # Use GPT-3 to generate post content
     response = openai.Completion.create(
-        engine="text-davinci-002",
-        prompt=  f"{input_text} Write an interesting fact about the property located at {address[0]}, {address[1]}, {address[2]} {address[3]}",
-        temperature=0.8,
+        engine="text-davinci-003",
+        prompt=  f"Write an interesting posting about the property located in the {city}, add some information about the protery in {state}, add description of the single family houses in this zipcode {code} and school of this location {address}, describe using keywords{input_text} ",
+        temperature=0.85,
+        max_tokens=2000,
+        top_p=1,
+        frequency_penalty=0,
+        presence_penalty=0
     )
     post_content = response["choices"][0]["text"]
-    print('post_content',post_content)
+    
+    return render_template('index.html', post_content=post_content)
+   
 
     # Return the generated content
-    return jsonify(post_content)
+    # return jsonify(post_content)
+    #  print('post_content',post_content)
 
 # if __name__ == "__main__":
 #     app.run(debug=True, port='9000')
