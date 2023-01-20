@@ -107,7 +107,7 @@ def generate_content():
 
     
        # Use an environment variable to set the API key
-    openai.api_key = "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"
+    openai.api_key = "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"
 
 
     # Use openai_secret_manager to fetch the API key
