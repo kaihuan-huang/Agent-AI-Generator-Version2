@@ -57,3 +57,27 @@ def get_attomdata_add(z):
 #
 #data = pd.read_csv(fname, sep=";")
 #print(data)
+
+async function openAi(apiKey, method, data) {
+  let requestOptions = {
+    method  : 'POST',
+    headers : {
+	  'Content-Type' : 'application/json',
+      'Authorization': `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify(data)
+  };
+  
+  return await fetch(`https://api.openai.com/v1/${method}`, requestOptions).then((response) => response.json());
+}
+
+
+let request = {
+  "model"      : "text-davinci-003",
+  "prompt"     : "<input text>",
+  "temperature": 0,
+  "max_tokens" : 1000
+}
+
+let result = await openAi(localStorage.getItem('myApiKey'), 'completions', request);
+console.log(result.choices[0].text);

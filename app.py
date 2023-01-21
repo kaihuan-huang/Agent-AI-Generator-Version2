@@ -91,8 +91,8 @@ def fetch_property_data():
 # Define the endpoint for generating post content using GPT-3
 @app.route("/generate/", methods=["GET","POST"])
 def generate_content():
-    # address = (request.form['address'],request.form['city'],request.form['state'],request.form['code'])
-    # print(address)
+    address = (request.form['address'],request.form['city'],request.form['state'],request.form['code'])
+    print(address)
         
     # Get the input from the request
     if request.method == "POST":
@@ -107,8 +107,7 @@ def generate_content():
 
     
        # Use an environment variable to set the API key
-    openai.api_key = "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"
-
+    openai.api_key = open('api.txt').readlines()[0]
 
     # Use openai_secret_manager to fetch the API key
     # import openai_secret_manager
