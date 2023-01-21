@@ -104,20 +104,24 @@ def generate_content():
         input_text = request.form['input_text']
         
         print(address,city,state,code,input_text)
-
-    
+ 
        # Use an environment variable to set the API key
     openai.api_key = open('api.txt').readlines()[0]
-
-    # Use openai_secret_manager to fetch the API key
-    # import openai_secret_manager
-    # secrets = openai_secret_manager.get_secrets("openai")
-    # openai.api_key = secrets["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"]
+    print(openai.api_key)
+    
+    my_promt=''' 
+    input: [171 W Julian St, San Jose, CA, 95110, good location]
+    output: Check out this fantastic property complex in San Jose. 171 W Julian St, San Jose, CA 95110 is a prime new spot near the square.
+    
+    input:[{Address},{city},{state},{code},{input_text}]
+    output:
+    '''
 
     # Use GPT-3 to generate post content
     response = openai.Completion.create(
         engine="text-davinci-003",
         prompt=  f"Write an interesting posting about the property located in the {city}, add some information about the protery in {state}, add description of the single family houses in this zipcode {code} and school of this location {address}, describe using keywords{input_text} ",
+        
         temperature=0.85,
         max_tokens=2000,
         top_p=1,
