@@ -109,18 +109,19 @@ def generate_content():
     openai.api_key = open('api.txt').readlines()[0]
     print(openai.api_key)
     
-    my_promt=''' 
-    input: [171 W Julian St, San Jose, CA, 95110, good location]
-    output: Check out this fantastic property complex in San Jose. 171 W Julian St, San Jose, CA 95110 is a prime new spot near the square.
+    # my_promt=''' 
+    # rules: [171 W Julian St, San Jose, CA, 95110, good location]
+    # output: Check out this fantastic property complex in San Jose. 171 W Julian St, San Jose, CA 95110 is a prime new spot near the square.
     
-    input:[{Address},{city},{state},{code},{input_text}]
-    output:
-    '''
+    # input:[{Address},{city},{state},{code},{input_text}]
+    # output:
+    # '''
+    property_type='condo'
 
     # Use GPT-3 to generate post content
     response = openai.Completion.create(
         engine="text-davinci-003",
-        prompt=  f"Write an interesting posting about the property located in the {city}, add some information about the protery in {state}, add description of the single family houses in this zipcode {code} and school of this location {address}, describe using keywords{input_text} ",
+        prompt=  f"rules: The property is a {property_type}, the area is sunny. Write an interesting posting about the property located in the {city}, add some information about the protery in {state}, add description of the single family houses in this zipcode {code} and school of this location {address}, describe using keywords{input_text} ",
         
         temperature=0.85,
         max_tokens=2000,
