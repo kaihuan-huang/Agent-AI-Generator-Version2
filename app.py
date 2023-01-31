@@ -55,8 +55,6 @@ def fetch_property_data():
    # Extract the address from the returned data
     
     
-    
-
 # # Define the endpoint for generating post content using GPT-3
 # @app.route("/generate/", methods=["GET","POST"])
 # def generate_content():
